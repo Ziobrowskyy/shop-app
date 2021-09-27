@@ -1,4 +1,5 @@
 export interface Campaign {
+  id: string
   name: string
   keywords: Array<string>
   bid: {
@@ -7,7 +8,7 @@ export interface Campaign {
   };
   campaignFund: number
   status: boolean
-  town: City
+  city: City
   radius: number
 }
 
