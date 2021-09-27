@@ -1,0 +1,55 @@
+@import "../styles/mixins";
+
+.campaign-item {
+  width: min(600px, 80vh);
+  max-width: min(95vh, 600px);
+  background-color: #eee;
+  position: relative;
+  color: black;
+  border-radius: 4px;
+  overflow: hidden;
+
+  .campaign-header {
+    background-color: #9EFFE8;
+    height: 5rem;
+    line-height: 5rem;
+    padding-left: 2rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
+  .content {
+    padding: 20px;
+    @include display-flex(20px, row);
+    justify-content: space-evenly;
+
+    &-left {
+
+    }
+
+    &-right {
+
+    }
+  }
+
+  .controls {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+
+    .delete-button {
+      all: unset;
+      font-weight: bold;
+      width: 20px;
+      font-size: x-large;
+      text-align: center;
+      line-height: 20px;
+
+      &:hover {
+        cursor: pointer;
+        color: lightgray;
+      }
+    }
+  }
+}
