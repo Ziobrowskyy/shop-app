@@ -4,33 +4,13 @@
 
   <div class="form-body">
 
-    <div class="form-item">
-      <label>
-        name
-        <input type="text" name="name" [(ngModel)]="name">
-      </label>
-    </div>
+    <form-item name="name" [(ngModel)]="name"></form-item>
 
-    <div class="form-item">
-      <label>
-        radius
-        <input type="number" name="radius" [(ngModel)]="radius">
-      </label>
-    </div>
+    <form-item name="radius" inputType="number" [(ngModel)]="radius"></form-item>
 
-    <div class="form-item">
-      <label>
-        starting bid
-        <input type="number" name="starting-bid" [(ngModel)]="startingBid">
-      </label>
-    </div>
+    <form-item name="starting-bid" label="starting bid" inputType="number" [(ngModel)]="startingBid"></form-item>
 
-    <div class="form-item">
-      <label>
-        fund
-        <input type="number" name="fund" [(ngModel)]="fund">
-      </label>
-    </div>
+    <form-item name="fund" inputType="number" [(ngModel)]="fund"></form-item>
 
     <div class="form-item">
       <label>
