@@ -1,0 +1,48 @@
+<form (ngSubmit)="onSubmit()" class="campaign-form">
+
+  <span class="form-title">Create new campaign</span>
+
+  <div class="form-body">
+
+    <div class="form-item">
+      <label>
+        name
+        <input type="text" name="name" [(ngModel)]="name">
+      </label>
+    </div>
+
+    <div class="form-item">
+      <label>
+        radius
+        <input type="number" name="radius" [(ngModel)]="radius">
+      </label>
+    </div>
+
+    <div class="form-item">
+      <label>
+        starting bid
+        <input type="number" name="starting-bid" [(ngModel)]="startingBid">
+      </label>
+    </div>
+
+    <div class="form-item">
+      <label>
+        fund
+        <input type="number" name="fund" [(ngModel)]="fund">
+      </label>
+    </div>
+
+    <div class="form-item">
+      <label>
+        town
+        <select name="city" [(ngModel)]="city">
+          <option *ngFor="let city of cities">{{city}}</option>
+        </select>
+      </label>
+    </div>
+
+    <button class="button button-secondary" type="submit">Submit</button>
+
+  </div>
+
+</form>

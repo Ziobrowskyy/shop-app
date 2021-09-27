@@ -1,0 +1,38 @@
+.campaign-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px 20px;
+
+  .form-title {
+    font-size: x-large;
+  }
+
+  .form-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .form-item {
+      label {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: large;
+        font-weight: bold;
+      }
+
+      input, select {
+        padding: 10px;
+        border-radius: 4px;
+        border: 1px gray solid;
+      }
+    }
+
+    button {
+      align-self: center;
+    }
+
+  }
+
+}
