@@ -16,6 +16,7 @@ import {FormContainerComponent} from "./form-container/form-container.component"
     CampaignItemComponent,
     CampaignListComponent,
     FormContainerComponent,
+    FormItemComponent,
   ],
   imports: [
     BrowserModule,
