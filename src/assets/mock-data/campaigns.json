@@ -1,0 +1,80 @@
+[
+  {
+    "id": "1",
+    "bid": {
+      "amount": 2961,
+      "minAmount": 1672
+    },
+    "campaignFund": 0,
+    "keywords": [],
+    "name": "Marketing campaign",
+    "radius": 107,
+    "status": true,
+    "city": "Cracow"
+  },
+  {
+    "id": "2",
+    "bid": {
+      "amount": 3091,
+      "minAmount": 3091
+    },
+    "campaignFund": 0,
+    "keywords": [],
+    "name": "Campaign 2",
+    "radius": 6,
+    "status": false,
+    "city": "Berlin"
+  },
+  {
+    "id": "3",
+    "bid": {
+      "amount": 4255,
+      "minAmount": 4110
+    },
+    "campaignFund": 0,
+    "keywords": [],
+    "name": "Sale of hairdryers",
+    "radius": 139,
+    "status": true,
+    "city": "Cracow"
+  },
+  {
+    "id": "4",
+    "bid": {
+      "amount": 3542,
+      "minAmount": 3338
+    },
+    "campaignFund": 0,
+    "keywords": [],
+    "name": "Black friday offers",
+    "radius": 36,
+    "status": true,
+    "city": "Cracow"
+  },
+  {
+    "id": "5",
+    "bid": {
+      "amount": 1576,
+      "minAmount": 1576
+    },
+    "campaignFund": 0,
+    "keywords": [],
+    "name": "Some product",
+    "radius": 23,
+    "status": true,
+    "city": "Berlin"
+  },
+  {
+    "id": "6",
+    "bid": {
+      "amount": 3534,
+      "minAmount": 3534
+    },
+    "campaignFund": 0,
+    "keywords": [],
+    "name": "My campaign",
+    "radius": 28,
+    "status": false,
+    "city": "Cracow"
+  }
+]
