@@ -1,0 +1,7 @@
+@import "../styles/mixins";
+
+.campaign-wrapper {
+  .campaign-list {
+    @include display-flex();
+  }
+}
