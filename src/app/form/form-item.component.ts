@@ -2,7 +2,7 @@ import {Component, forwardRef, Input} from '@angular/core';
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
 import {noop} from "rxjs";
 
-export type InputType = "text" | "number"
+export type InputType = "text" | "number" | "password"
 
 @Component({
   selector: 'form-item',
