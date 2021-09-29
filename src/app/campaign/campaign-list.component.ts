@@ -9,7 +9,7 @@ import {ActivatedRoute} from "@angular/router";
   template: `
     <div class="campaign-wrapper">
       <div class="campaign-list">
-        <campaign-item *ngFor="let campaign of filteredCampaigns.reverse()" [campaign]="campaign" (onRemove)="onCampaignRemoved($event)"></campaign-item>
+        <campaign-item *ngFor="let campaign of filteredCampaigns" [campaign]="campaign" (onRemove)="onCampaignRemoved($event)"></campaign-item>
       </div>
     </div>`
 })
@@ -24,7 +24,7 @@ export class CampaignListComponent implements OnInit {
 
   async ngOnInit() {
     const result = await API.getCampaigns()
-    this.campaigns = result.data.map((el: Campaign) => el)
+    this.campaigns = result.data.map((el: Campaign) => el).reverse()
     if (this.route.snapshot.params["username"]) {
       this.userFilter = this.route.snapshot.params["username"]
       this.campaigns = this.campaigns.filter(el => el?.user == this.userFilter)
@@ -43,7 +43,7 @@ export class CampaignListComponent implements OnInit {
 
   addCampaign = (campaign: Campaign) => {
     if (!this.userFilter || campaign.user == this.userFilter) {
-      this.campaigns.push(campaign)
+      this.campaigns.unshift(campaign)
       this.filterCampaigns()
     }
   }
