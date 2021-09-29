@@ -21,7 +21,7 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
         </div>
 
         <div class="form-wrapper user-wrapper">
-          <div class="text-and-button hover-highlight" (click)="toggleUser()">
+          <div class="text-and-button hover-highlight" (click)="toggleUserMenu()">
             <span>user<br/>data</span>
 
             <img src="../../assets/images/user-image-white-fill.svg" alt="user image"/>
@@ -30,13 +30,13 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
         </div>
 
         <div class="form-wrapper">
-          <div class="text-and-button hover-highlight" (click)="toggleForm()">
+          <div class="text-and-button hover-highlight" (click)="toggleCampaignForm()">
             <span>add<br/>campaign</span>
 
             <img [ngClass]="{'add-rotate': shouldShowForm}" src="../../assets/images/add.svg" alt="add new"/>
           </div>
 
-          <campaign-form-container class="form-container" [ngClass]="{'close':!shouldShowForm}" (close)="toggleForm()" (formSubmitted)="onFormSubmitted.emit($event)"></campaign-form-container>
+          <campaign-form-container class="form-container" [ngClass]="{'close':!shouldShowForm}" (close)="toggleCampaignForm()" (formSubmitted)="onFormSubmitted.emit($event)"></campaign-form-container>
         </div>
 
       </div>
@@ -53,7 +53,7 @@ export class NavbarComponent {
   shouldShowMenu: boolean = false
   shouldShowUser: boolean = false
 
-  toggleForm() {
+  toggleCampaignForm() {
     this.shouldShowForm = !this.shouldShowForm
     this.shouldShowUser = false
     this.shouldShowMenu = false
@@ -66,7 +66,7 @@ export class NavbarComponent {
     this.shouldShowUser = false
   }
 
-  toggleUser() {
+  toggleUserMenu() {
     this.shouldShowUser = !this.shouldShowUser
     this.shouldShowMenu = false
     this.shouldShowForm = false
