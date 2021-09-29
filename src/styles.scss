@@ -32,8 +32,9 @@ body {
     background-color: $light-gray;
   }
 
-
-
+  &:hover {
+    background-color: $primary-o75;
+  }
 }
 
 .controls {
