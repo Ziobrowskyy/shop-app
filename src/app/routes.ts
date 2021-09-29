@@ -5,6 +5,6 @@ import {CampaignDetailComponent} from "./campaign-detail/campaign-detail.compone
 export const appRoutes: Routes = [
   {path: "campaigns", component: CampaignListComponent},
   {path: "campaign/:id", component: CampaignDetailComponent},
-  {path: "user-campaigns", component: CampaignListComponent},
+  {path: "user-campaigns/:username", component: CampaignListComponent},
   {path: "", redirectTo: "campaigns", pathMatch: "full"},
 ]
