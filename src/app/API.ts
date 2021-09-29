@@ -13,7 +13,7 @@ export default class API {
   })
   static getCampaigns = () => api.get("/campaigns")
 
-  static getCampaign = (id: string) => api.get("/campaign", {params: {id}})
+  static getCampaign: ((id: string) => Promise<AxiosResponse<Campaign>>) = (id: string) => api.get("/campaign", {params: {id}})
 
   static deleteCampaign = (id: string) => api.delete("/campaign", {params: {id}})
 
