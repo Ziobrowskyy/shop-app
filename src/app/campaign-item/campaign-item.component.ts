@@ -6,15 +6,23 @@ import {Campaign} from "../campaign";
   styleUrls: ['./campaign-item.component.scss'],
   template: `
     <div class="campaign-item">
-      <div class="campaign-header">{{campaign.name}}</div>
+      <div class="campaign-header">{{campaign?.name}}</div>
       <div class="content">
-        <div class="content-left">
-          <p>Location: {{campaign.city}}</p>
-          <p>Distance: {{campaign.radius}}</p>
+        <div class="details">
+          <p>
+            <span class="label">Location:</span><span class="value">{{campaign?.city}}</span>
+          </p>
+          <p>
+            <span class="label">Distance:</span><span class="value">{{campaign?.radius}}</span>
+          </p>
         </div>
-        <div class="content-right">
-          <p>Current bid: {{campaign.bid.amount}}</p>
-          <p>Place your bid: {{campaign.bid.amount}}</p>
+        <div class="details">
+          <p>
+            <span class="label">Current bid:</span><span class="value">{{campaign?.currentBid}}</span>
+          </p>
+          <a class="more-button" routerLink="/campaign/{{campaign?.id}}">
+            show more info
+          </a>
         </div>
       </div>
       <div class="controls">
@@ -23,15 +31,11 @@ import {Campaign} from "../campaign";
     </div>`
 })
 export class CampaignItemComponent {
-  @Input() campaign!: Campaign;
+  @Input() campaign?: Campaign
   @Output() onRemove = new EventEmitter()
   @Output() onClick = new EventEmitter()
 
-  handleClick() {
-    this.onClick.emit(this.campaign.id)
-  }
-
   handleRemove() {
-    this.onRemove.emit(this.campaign.id)
+    this.onRemove.emit(this.campaign?.id)
   }
 }

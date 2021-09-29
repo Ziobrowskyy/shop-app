@@ -1,55 +1,47 @@
 @import "../styles/mixins";
+@import "../styles/colors";
 
 .campaign-item {
   width: min(600px, 80vh);
   max-width: min(95vh, 600px);
-  background-color: #eee;
   position: relative;
-  color: black;
-  border-radius: 4px;
-  overflow: hidden;
 
   .campaign-header {
-    background-color: #9EFFE8;
-    height: 5rem;
-    line-height: 5rem;
+    background: linear-gradient(90deg, $primary-o75 0%, rgba(255, 255, 255, 0));
+    height: 4rem;
+    @include flex-center;
+    justify-content: start;
     padding-left: 2rem;
-    font-size: 1.8rem;
-    font-weight: bold;
+    font-size: x-large;
   }
 
   .content {
-    padding: 20px;
     @include display-flex(20px, row);
-    justify-content: space-evenly;
+    padding: 2rem;
+    justify-content: space-between;
 
-    &-left {
+    .details {
+      @include display-flex(20px, column);
+      color: $dark-gray;
 
-    }
+      .label {
+        font-weight: bold;
+      }
 
-    &-right {
+      span {
+        margin-left: 1rem;
+      }
 
+      .more-button {
+        color: $primary;
+        font-weight: bolder;
+        text-align: center;
+      }
     }
   }
 
   .controls {
-    position: absolute;
     top: 0;
     right: 0;
-    padding: 10px;
-
-    .delete-button {
-      all: unset;
-      font-weight: bold;
-      width: 20px;
-      font-size: x-large;
-      text-align: center;
-      line-height: 20px;
-
-      &:hover {
-        cursor: pointer;
-        color: lightgray;
-      }
-    }
   }
 }
