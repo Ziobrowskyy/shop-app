@@ -39,7 +39,9 @@ export class CampaignFormContainerComponent {
 
 
   submitForm() {
+    const user = localStorage.getItem("user")
     const campaign: Campaign = {
+      user: user?.toString() || "anon",
       id: Date.now().toString(),
       name: this.name,
       minBid: this.startingBid,

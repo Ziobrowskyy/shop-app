@@ -1,4 +1,5 @@
 export interface Campaign {
+  user?: string
   id: string
   name: string
   keywords: Array<string>

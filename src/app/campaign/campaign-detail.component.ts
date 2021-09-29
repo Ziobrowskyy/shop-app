@@ -23,6 +23,9 @@ import {ActivatedRoute} from "@angular/router";
           </span>
           </div>
           <div class="content-field">
+            <span class="label">Author:</span><span class="value">{{campaign?.user}}</span>
+          </div>
+          <div class="content-field">
             <span class="label">Status:</span><span class="value">{{campaign?.status ? "active" : "disabled"}}</span>
           </div>
           <div class="content-field">
@@ -56,7 +59,6 @@ export class CampaignDetailComponent implements OnInit {
   }
 
   async ngOnInit() {
-    console.log(this.route.snapshot.params)
     this.campaign = (await API.getCampaign(this.route.snapshot.params['id'])).data
     this.bidValue = this.campaign?.currentBid
   }

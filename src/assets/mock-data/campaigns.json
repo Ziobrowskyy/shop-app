@@ -1,6 +1,7 @@
 [
   {
     "id": "1",
+    "user": "admin",
     "currentBid": 2961,
     "minBid": 1672,
     "campaignFund": 0,
@@ -12,6 +13,7 @@
   },
   {
     "id": "2",
+    "user": "admin",
     "currentBid": 3091,
     "minBid": 3091,
     "campaignFund": 0,
@@ -23,6 +25,7 @@
   },
   {
     "id": "3",
+    "user": "admin",
     "currentBid": 4255,
     "minBid": 4110,
     "campaignFund": 0,
@@ -34,6 +37,7 @@
   },
   {
     "id": "4",
+    "user": "tomek",
     "currentBid": 3542,
     "minBid": 3338,
     "campaignFund": 0,
@@ -45,6 +49,7 @@
   },
   {
     "id": "5",
+    "user": "tomek",
     "currentBid": 1576,
     "minBid": 1576,
     "campaignFund": 0,
@@ -56,6 +61,7 @@
   },
   {
     "id": "6",
+    "user": "tomek",
     "currentBid": 3534,
     "minBid": 3534,
     "campaignFund": 0,
