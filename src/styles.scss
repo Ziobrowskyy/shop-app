@@ -1,3 +1,5 @@
+@import "./app/styles/colors";
+
 * {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   margin: 0;
@@ -6,22 +8,50 @@
 }
 
 body {
-  background-color: #fff;
+  background-color: $background;
 }
 
 .button {
   display: block;
   all: unset;
-  color: black;
+  color: $dark-gray;
   font-weight: bold;
   padding: 10px 20px;
   border-radius: 8px;
+  text-align: center;
 
   &-primary {
-    background-color: #67d09f;
+    background-color: $primary;
+  }
+
+  &-primary-light {
+    background-color: $primary-light;
   }
 
   &-secondary {
-    background-color: #9b9b9b;
+    background-color: $light-gray;
+  }
+
+
+
+}
+
+.controls {
+  position: absolute;
+  padding: 20px;
+
+  .delete-button {
+    all: unset;
+    font-weight: bold;
+    width: 20px;
+    font-size: x-large;
+    text-align: center;
+    line-height: 20px;
+
+    &:hover {
+      cursor: pointer;
+      color: lightgray;
+    }
   }
 }
+
