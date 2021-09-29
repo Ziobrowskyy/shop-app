@@ -19,10 +19,10 @@ import {UserContainerComponent} from "./navbar/user-container.component";
   declarations: [
     AppComponent,
     CampaignDetailComponent,
+    CampaignFormContainerComponent,
     CampaignItemComponent,
     CampaignListComponent,
     FormComponent,
-    CampaignFormContainerComponent,
     FormItemComponent,
     NavbarComponent,
     UserContainerComponent
