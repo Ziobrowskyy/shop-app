@@ -1,10 +1,8 @@
 [
   {
     "id": "1",
-    "bid": {
-      "amount": 2961,
-      "minAmount": 1672
-    },
+    "currentBid": 2961,
+    "minBid": 1672,
     "campaignFund": 0,
     "keywords": [],
     "name": "Marketing campaign",
@@ -14,10 +12,8 @@
   },
   {
     "id": "2",
-    "bid": {
-      "amount": 3091,
-      "minAmount": 3091
-    },
+    "currentBid": 3091,
+    "minBid": 3091,
     "campaignFund": 0,
     "keywords": [],
     "name": "Campaign 2",
@@ -27,10 +23,8 @@
   },
   {
     "id": "3",
-    "bid": {
-      "amount": 4255,
-      "minAmount": 4110
-    },
+    "currentBid": 4255,
+    "minBid": 4110,
     "campaignFund": 0,
     "keywords": [],
     "name": "Sale of hairdryers",
@@ -40,10 +34,8 @@
   },
   {
     "id": "4",
-    "bid": {
-      "amount": 3542,
-      "minAmount": 3338
-    },
+    "currentBid": 3542,
+    "minBid": 3338,
     "campaignFund": 0,
     "keywords": [],
     "name": "Black friday offers",
@@ -53,10 +45,8 @@
   },
   {
     "id": "5",
-    "bid": {
-      "amount": 1576,
-      "minAmount": 1576
-    },
+    "currentBid": 1576,
+    "minBid": 1576,
     "campaignFund": 0,
     "keywords": [],
     "name": "Some product",
@@ -66,10 +56,8 @@
   },
   {
     "id": "6",
-    "bid": {
-      "amount": 3534,
-      "minAmount": 3534
-    },
+    "currentBid": 3534,
+    "minBid": 3534,
     "campaignFund": 0,
     "keywords": [],
     "name": "My campaign",

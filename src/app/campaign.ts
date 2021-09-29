@@ -2,10 +2,8 @@ export interface Campaign {
   id: string
   name: string
   keywords: Array<string>
-  bid: {
-    amount: number
-    minAmount: number
-  };
+  currentBid: number
+  minBid: number
   campaignFund: number
   status: boolean
   city: City
