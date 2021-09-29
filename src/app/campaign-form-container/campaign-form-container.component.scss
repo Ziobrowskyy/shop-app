@@ -1,31 +1,17 @@
 @import "../styles/colors";
 
 .slide-form {
-  padding: 0 20px 10px 20px;
-  display: block;
-  background-color: $primary-light;
-  border-radius: 8px;
-  color: $dark-gray;
-
-  .controls {
-    top: 0;
-    right: 0;
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: large;
+    font-weight: bold;
   }
 
-  .form-item {
-    label {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      font-size: large;
-      font-weight: bold;
-    }
-
-    input, select {
-      padding: 10px;
-      border-radius: 4px;
-      border: 1px gray solid;
-    }
+  select {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px gray solid;
   }
-
 }
