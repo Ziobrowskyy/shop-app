@@ -11,12 +11,13 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 
         <input class="search-input" type="text" (input)="onInputChange.emit($event)" placeholder="filter posts"/>
 
-        <div class="menu hover-highlight" (click)="toggleMenu()">
-          <img src="../../assets/images/hamburger-menu.svg" alt="menu"/>
-
-          <div class="drop-down-menu" [ngClass]="{'hide-menu': !shouldShowMenu}">
-            <span>show user</span>
-            <span>add new campaign</span>
+        <div class="menu">
+          <div class="hover-highlight" (click)="toggleMenu()">
+            <img src="../../assets/images/hamburger-menu.svg" alt="menu"/>
+          </div>
+          <div class="drop-down-menu form-container" [ngClass]="{'hide-menu': !shouldShowMenu}">
+            <span (click)="toggleUserMenu()">user controls</span>
+            <span (click)="toggleCampaignForm()">add new campaign</span>
           </div>
         </div>
 
