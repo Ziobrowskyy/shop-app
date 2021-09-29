@@ -33,9 +33,10 @@ export default class API {
 
 // mocking
 const mock = new MockAdapter(api)
-import campaigns from "../assets/mock-data/campaigns.json"
-import users from "../assets/mock-data/users.json"
-
+import _campaigns from "../assets/mock-data/campaigns.json"
+import _users from "../assets/mock-data/users.json"
+const campaigns = _campaigns
+const users = _users
 mock.onGet("/campaigns").reply(200, campaigns)
 
 mock.onGet(new RegExp("/campaign")).reply(({params: {id}}) => {
