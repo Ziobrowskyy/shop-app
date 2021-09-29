@@ -6,6 +6,11 @@
   max-width: min(95vh, 600px);
   position: relative;
 
+  @media (max-width: 700px) {
+    width: 100vw;
+    max-width: unset;
+  }
+
   .campaign-header {
     background: linear-gradient(90deg, $primary-o75 0%, rgba(255, 255, 255, 0));
     height: 4rem;
@@ -13,12 +18,25 @@
     justify-content: start;
     padding-left: 2rem;
     font-size: x-large;
+
+    @media (max-width: 700px) {
+      padding-left: 4rem;
+    }
+  }
+
+  .controls {
+    top: 0;
+    right: 0;
   }
 
   .content {
     @include display-flex(20px, row);
     padding: 2rem;
     justify-content: space-between;
+
+    @media (max-width: 700px) {
+      justify-content: space-around;
+    }
 
     .details {
       @include display-flex(20px, column);

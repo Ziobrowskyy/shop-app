@@ -1,9 +1,11 @@
 @import "../styles/mixins";
 
 .campaign-wrapper {
+  @media (max-width: 700px) {
+    width: 100vw;
+  }
   .campaign-list {
     @include display-flex;
-
     > *:not(:last-child) {
       border-bottom: 1px black solid;
     }
