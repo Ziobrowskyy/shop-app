@@ -2,6 +2,10 @@
 
 .campaign-wrapper {
   .campaign-list {
-    @include display-flex();
+    @include display-flex;
+
+    > *:not(:last-child) {
+      border-bottom: 1px black solid;
+    }
   }
 }
