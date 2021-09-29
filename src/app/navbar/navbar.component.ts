@@ -58,11 +58,11 @@ export class NavbarComponent {
     this.shouldShowForm = !this.shouldShowForm
     this.shouldShowUser = false
     this.shouldShowMenu = false
-
   }
 
   toggleMenu() {
-    this.shouldShowMenu = !this.shouldShowMenu
+    const isAnyVisible = this.shouldShowUser || this.shouldShowForm || this.shouldShowMenu
+    this.shouldShowMenu = !isAnyVisible
     this.shouldShowForm = false
     this.shouldShowUser = false
   }
