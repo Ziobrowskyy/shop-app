@@ -6,7 +6,7 @@ import API from "./API";
   selector: 'app-root',
   styleUrls: ['./app.component.scss'],
   template: `
-    <h1>{{title}}</h1>
+    <app-navbar (onInputChange)="onInputChange($event)" (onFormSubmitted)="onCampaignFormSubmitted($event)" [appName]="title"></app-navbar>
     <div class="content-wrapper">
       <router-outlet (activate)="currentComponent = $event"></router-outlet>
     </div>
@@ -23,5 +23,8 @@ export class AppComponent {
     this.currentComponent?.addCampaign?.(campaign)
   }
 
+  onInputChange(event: any) {
+    this.currentComponent?.updateFilter?.(event.target.value.toString())
+  }
 
 }

@@ -1,0 +1,128 @@
+@import "../styles/mixins";
+@import "../styles/colors";
+
+$highlight: #fff3;
+
+header {
+  width: 100vw;
+  background-color: $dark-gray;
+  color: white;
+  @include flex-center;
+
+  .header-wrapper {
+    @include display-flex(20px, row);
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    justify-items: center;
+
+    .brand {
+      font-weight: bold;
+      font-size: x-large;
+      text-decoration: none;
+      color: white;
+      text-align: center;
+    }
+
+    .text-and-button {
+      @media (max-width: 700px) {
+        display: none !important;
+      }
+
+      > span {
+        @media (max-width: 900px) {
+          display: none;
+        }
+        text-align: center;
+        margin-right: 1rem;
+      }
+    }
+
+    .menu {
+      @media (min-width: 700px) {
+        display: none !important;
+      }
+
+      .drop-down-menu {
+        background-color: $primary-o90;
+        z-index: 2;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        @include display-flex(40px);
+        padding: 3rem 5rem;
+
+        > * {
+          font-size: large;
+          text-align: right;
+        }
+      }
+
+      .hide-menu {
+        display: none;
+      }
+    }
+
+    .search-input {
+      @media (max-width: 500px) {
+        display: none;
+      }
+      all: unset;
+      height: 50%;
+      background-color: white;
+      caret-color: black;
+      color: black;
+      padding: 0 10px 0 15px;
+      border-radius: 12px;
+      border: 1px black solid;
+    }
+
+    .hover-highlight {
+      height: 100%;
+      @include flex-center;
+      padding: 0 30px;
+
+      img {
+        height: 50%;
+        width: auto;
+      }
+
+      &:hover {
+        background-color: $highlight;
+      }
+    }
+
+    .form-wrapper {
+      height: 100%;
+      @include flex-center;
+      img {
+        z-index: 2;
+        transition: transform 0.3s;
+      }
+      .add-rotate {
+        transform: rotate(-135deg);
+        //transform: rotate(-45deg);
+      }
+
+      .form-container {
+        @media (max-width: 900px) {
+          left: 0;
+          right: 0;
+        }
+        transform-origin: top center;
+        position: absolute;
+        top: 80px;
+        z-index: 1;
+        transition: transform, opacity;
+        transition-duration: 0.3s;
+      }
+
+      .close {
+        opacity: 0;
+        transform: scale(0);
+      }
+    }
+  }
+
+}
