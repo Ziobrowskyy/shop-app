@@ -1,6 +1,7 @@
 import {Component, OnInit} from "@angular/core";
 import {Campaign} from "../campaign";
 import API from "../API";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: "campaign-list",
@@ -16,10 +17,18 @@ export class CampaignListComponent implements OnInit {
   nameFilter?: string
   campaigns: Array<Campaign> = Array()
   filteredCampaigns: Array<Campaign> = Array()
+  userFilter?: string
+
+  constructor(private route: ActivatedRoute) {
+  }
 
   async ngOnInit() {
     const result = await API.getCampaigns()
     this.campaigns = result.data.map((el: Campaign) => el)
+    if (this.route.snapshot.params["username"]) {
+      this.userFilter = this.route.snapshot.params["username"]
+      this.campaigns = this.campaigns.filter(el => el?.user == this.userFilter)
+    }
     this.filterCampaigns()
   }
 
@@ -33,8 +42,10 @@ export class CampaignListComponent implements OnInit {
   }
 
   addCampaign = (campaign: Campaign) => {
-    this.campaigns.push(campaign)
-    this.filterCampaigns()
+    if (!this.userFilter || campaign.user == this.userFilter) {
+      this.campaigns.push(campaign)
+      this.filterCampaigns()
+    }
   }
 
   updateFilter = (newFilter: string) => {
