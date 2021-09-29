@@ -20,10 +20,13 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
           </div>
         </div>
 
-        <div class="text-and-button hover-highlight" (click)="toggleUser()">
-          <span>user<br/>data</span>
+        <div class="form-wrapper user-wrapper">
+          <div class="text-and-button hover-highlight" (click)="toggleUser()">
+            <span>user<br/>data</span>
 
-          <img src="../../assets/images/user-image-white-fill.svg" alt="user image"/>
+            <img src="../../assets/images/user-image-white-fill.svg" alt="user image"/>
+          </div>
+          <user-container class="form-container" [ngClass]="{'close': !shouldShowUser}"></user-container>
         </div>
 
         <div class="form-wrapper">
@@ -48,16 +51,24 @@ export class NavbarComponent {
   @Output() onInputChange = new EventEmitter()
   shouldShowForm: boolean = false
   shouldShowMenu: boolean = false
+  shouldShowUser: boolean = false
 
   toggleForm() {
     this.shouldShowForm = !this.shouldShowForm
+    this.shouldShowUser = false
+    this.shouldShowMenu = false
+
   }
 
   toggleMenu() {
     this.shouldShowMenu = !this.shouldShowMenu
+    this.shouldShowForm = false
+    this.shouldShowUser = false
   }
 
   toggleUser() {
-
+    this.shouldShowUser = !this.shouldShowUser
+    this.shouldShowMenu = false
+    this.shouldShowForm = false
   }
 }

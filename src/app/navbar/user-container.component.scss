@@ -1,0 +1,7 @@
+@import "../styles/colors";
+@import "../styles/mixins";
+
+.user-content {
+  @include display-flex();
+  padding: 2rem;
+}

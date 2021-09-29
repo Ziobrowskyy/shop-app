@@ -13,6 +13,7 @@ import {FormItemComponent} from "./form/form-item.component";
 import {RouterModule} from "@angular/router";
 import {appRoutes} from "./routes";
 import {CampaignDetailComponent} from "./campaign-detail/campaign-detail.component";
+import {UserContainerComponent} from "./navbar/user-container.component";
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import {CampaignDetailComponent} from "./campaign-detail/campaign-detail.compone
     CampaignFormContainerComponent,
     FormItemComponent,
     NavbarComponent,
+    UserContainerComponent
   ],
   imports: [
     BrowserModule,

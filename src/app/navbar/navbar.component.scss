@@ -106,9 +106,16 @@ header {
       }
 
       .form-container {
+        background-color: $primary-light;
+        padding: 0 20px 10px 20px;
+        display: block;
+        border-radius: 8px;
+        color: $dark-gray;
+
+
         @media (max-width: 900px) {
+          width: 100vw;
           left: 0;
-          right: 0;
         }
         transform-origin: top center;
         position: absolute;
