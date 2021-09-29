@@ -18,6 +18,7 @@
     @include display-flex(40px, row);
     justify-content: space-between;
     padding: 2rem;
+    color: $dark-gray;
 
     > * {
       flex: 1;

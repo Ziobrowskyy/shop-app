@@ -1,6 +1,6 @@
 import {Routes} from "@angular/router";
-import {CampaignListComponent} from "./campaign-list/campaign-list.component";
-import {CampaignDetailComponent} from "./campaign-detail/campaign-detail.component";
+import {CampaignListComponent} from "./campaign/campaign-list.component";
+import {CampaignDetailComponent} from "./campaign/campaign-detail.component";
 
 export const appRoutes: Routes = [
   {path: "campaigns", component: CampaignListComponent},
