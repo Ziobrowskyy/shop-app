@@ -74,7 +74,8 @@ mock.onPut("/campaign").reply(({data, params}) => {
   return [200]
 })
 
-mock.onPost("/login").reply(({data: {login, password}}) => {
+mock.onPost("/login").reply(({data}) => {
+  const {login, password} = JSON.parse(data)
   const found = users.find(el => el.login == login && el.password == password)
   if (!found)
     return [400, "Wrong user and/or password"]
@@ -82,9 +83,10 @@ mock.onPost("/login").reply(({data: {login, password}}) => {
 })
 
 mock.onPost("/register").reply(({data}) => {
-  const found = users.find(el => el.login == data.login)
+  const {login, password} = JSON.parse(data)
+  const found = users.find(el => el.login == login)
   if (found)
     return [400, "User with given name already exists"]
-  users.push(JSON.parse(data))
+  users.push({login, password})
   return [200]
 })
