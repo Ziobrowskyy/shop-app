@@ -7,6 +7,7 @@ import {Campaign, City} from "../campaign";
   template: `
     <app-form class="slide-form" (onSubmitted)="submitForm()">
       <form-item name="name" [(ngModel)]="name"></form-item>
+      <form-item name="keywords" label="keywords (separate with space)" [(ngModel)]="keywords"></form-item>
       <form-item name="radius" inputType="number" [(ngModel)]="radius"></form-item>
       <form-item name="starting-bid" label="starting bid" inputType="number" [(ngModel)]="startingBid"></form-item>
       <form-item name="fund" inputType="number" [(ngModel)]="fund"></form-item>
@@ -30,6 +31,7 @@ export class CampaignFormContainerComponent {
   @Output() close = new EventEmitter()
 
   name: string = ""
+  keywords: string = ""
   radius: number = 10
   startingBid: number = 250
   fund: number = 100
@@ -43,13 +45,13 @@ export class CampaignFormContainerComponent {
     const campaign: Campaign = {
       user: user?.toString() || "anon",
       id: Date.now().toString(),
+      keywords: this.keywords.split(" "),
       name: this.name,
       minBid: this.startingBid,
       currentBid: this.startingBid,
       campaignFund: this.fund,
       city: this.city,
       radius: this.radius,
-      keywords: [],
       status: true
     }
     this.close.emit()
