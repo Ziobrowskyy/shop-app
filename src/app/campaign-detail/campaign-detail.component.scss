@@ -1,0 +1,50 @@
+@import "../styles/mixins";
+@import "../styles/colors";
+
+.campaign-detail {
+  width: min(600px, 80vh);
+  max-width: min(95vh, 600px);
+
+  .campaign-header {
+    background: linear-gradient(90deg, $primary-o75 0%, rgba(255, 255, 255, 0));
+    height: 4rem;
+    @include flex-center;
+    justify-content: start;
+    padding-left: 2rem;
+    font-size: x-large;
+  }
+
+  .content {
+    @include display-flex(40px, row);
+    justify-content: space-between;
+    padding: 2rem;
+
+    > * {
+      flex: 1;
+    }
+
+    .content-field {
+      margin: 0.5rem 0;
+      @include display-flex(20px, row);
+      justify-content: space-between;
+    }
+
+    .label {
+      font-weight: bold;
+      @include display-flex(20px, row);
+      align-items: center;
+    }
+
+    input {
+      padding: 5px 10px;
+      border-radius: 4px;
+      max-width: 120px;
+      border: 1px gray solid;
+    }
+
+    button {
+      margin-top: 0.5rem;
+      float: right;
+    }
+  }
+}
