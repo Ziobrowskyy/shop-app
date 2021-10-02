@@ -11,10 +11,14 @@ header {
 
   .header-wrapper {
     @include display-flex(20px, row);
-    justify-content: space-between;
     height: 80px;
     align-items: center;
     justify-items: center;
+
+    @media (max-width: 700px) {
+      width: 100%;
+      justify-content: space-around;
+    }
 
     .brand {
       font-weight: bold;
@@ -25,10 +29,6 @@ header {
     }
 
     .text-and-button {
-      @media (max-width: 700px) {
-        display: none !important;
-      }
-
       > span {
         @media (max-width: 900px) {
           display: none;
@@ -37,7 +37,11 @@ header {
         margin-right: 1rem;
       }
     }
-
+    .campaign-form-wrapper, .user-wrapper {
+      @media (max-width: 700px) {
+        display: none !important;
+      }
+    }
     .menu {
       height: 100%;
       @media (min-width: 700px) {

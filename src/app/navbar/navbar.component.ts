@@ -30,7 +30,7 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
           <user-container class="form-container" [ngClass]="{'close': !shouldShowUser}"></user-container>
         </div>
 
-        <div class="form-wrapper">
+        <div class="form-wrapper campaign-form-wrapper">
           <div class="text-and-button hover-highlight" (click)="toggleCampaignForm()">
             <span>add<br/>campaign</span>
 
